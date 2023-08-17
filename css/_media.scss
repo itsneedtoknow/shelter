@@ -1,0 +1,566 @@
+
+@media (max-width: 769px){
+    body .overlay{
+        overflow: hidden;
+    }
+    ._container{
+        max-width: 708px;
+    }
+    .main__content {
+        flex-direction: column;
+        padding-top: 30px;
+    }
+    .main__btn{
+        margin: 0 auto;
+    }
+    .main__text{
+        margin: 0 auto;
+        padding-top: 0;
+    }
+    .main__img{
+        width: 569px;
+        height: 593px;
+        margin-left: calc(50% - 569px/2 + 70px);;
+    }
+    .main__content >*:not(:last-child){
+        margin-right: auto; 
+        margin-bottom: 100px;
+    }   
+   
+    }
+   
+    @media (max-width: 768px){
+
+    .header__burger_pets{
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 22px;
+        margin-right: 43px;
+    }
+    .header__burger_pets span{
+        background-color: black;
+    }
+    .header__burger_pets::before,
+    .header__burger_pets::after{
+        background-color: black;
+    }
+    .header__burger_pets::before{
+        top: 0;
+    }
+    .header__burger_pets::after{
+        bottom: 0;
+    }
+    /* -------------------- ABOUT----------------------*/
+    .about__content{
+        flex-direction: column-reverse;
+    }
+    .about__title{
+        text-align: start;
+    }
+    .about__text{
+        margin-bottom: 80px;
+    }
+    .about__content >*:not(:last-child){
+        margin-right: auto;
+    }
+    .about__img{
+        margin: 0 auto;
+    }
+    /* ------------FRIENDS----------------- */
+    
+    .friends__list >*:not(:last-child){
+        margin-right: 40px;
+    }   
+    .friends__list {
+        margin: 0 auto;
+    }
+    .slider{
+        max-width: 708px;
+    }
+    .carousel{
+        left: -640px;
+    }
+    .items__block >*:not(:last-child) {
+        margin-right: 40px;
+    }
+    @keyframes move-right{
+        from{left: -640px;}
+        to{left: -1280px;}    
+    }
+    .transition-right{
+            animation-name: move-right;
+            animation-duration: 3s;
+        }
+    @keyframes move-left{
+            from{left: -640px;}
+            to{left: 0px;}    
+        }
+    .transition-left{
+                animation-name: move-left;
+                animation-duration: 5s;
+            }
+    /* --------------HELP--------------- */
+    .help__list{
+        max-width: 630px;
+        margin: 0 auto;
+    }
+    
+    .help__item {
+        margin: 0 20px;
+        flex: 0 0 25%;
+    }
+    .help__list>*:not(:nth-child(n+7)):nth-child(-n+9){
+        margin-bottom: 55px;
+    }
+    /* --------------DONATION---------------- */
+    .donation__container{
+       flex-direction: column-reverse;
+       align-items: center;
+    }
+    .donation__text{
+        margin: 0 auto;
+        margin-bottom: 60px;
+    }
+    .donation__img{
+        margin-right: 0;
+    }
+    /* ---------FOOOTER--------------*/
+    .footer {
+        padding-top: 30px;
+    }
+    .footer__container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer__section{
+        padding-top: 0;
+    }
+    .footer__text>*:not(:last-child){
+        margin-right: 60px;
+    }
+    .footer__text{
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+    .footer__text{
+        margin-bottom: 65px;
+    }
+    .contacts__section{
+        margin-bottom: 0;
+    }
+     /* ------------------           OUR PETS                ----------------- */
+    
+    .pets{
+        padding-bottom: 70px;
+    }
+    .pets__list >*:not(:nth-child(4)):not(:nth-child(8)) {
+        margin-right: unset;
+    }
+    .pets__item{
+        flex: 0 0 25%;
+    }
+    
+    .carousel__wrapper{
+        width: 580px;
+        
+        overflow-y: hidden;
+    }
+    .pets__list{
+        justify-content: space-between;
+        max-height: 1365px;
+        max-width: 100%;
+    }
+    .pets__title{
+        margin-bottom: 30px;
+    }
+        .pets__paginator {
+        margin-bottom: 5px;
+    }
+}
+    /* ----------BURGER----------- */
+    @media (max-width: 768px){
+       /* new */
+       .header__container{
+        position: relative;
+    }
+    .header__burger{
+            display: block;
+            position: absolute;
+            right: 50px;
+            width: 30px;
+            height: 22px;
+            z-index: 999;
+            transition: 0.2s;
+        }
+        .header__menu{
+            visibility: hidden;
+            opacity: 0;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-color: #292929;
+            z-index: 998;
+        }
+        .header__menu.active{
+            display: flex;
+            max-width: 320px;              
+            right: 0;
+            top: 0;   
+            transition: 0.2s;  
+            visibility: visible;
+            opacity: 1;
+        }
+        .header__menu.active >.menu__list{
+            flex-direction: column;
+            padding: 248px 38px;
+            height: 100vh; 
+        }
+        .header__menu.active >.menu__list >*:not(:last-child){
+            margin-bottom: 40px;
+        }
+        .header__menu.active>.menu__list >.menu__item{
+            font-size: 32px;
+            margin-right: unset;
+        }
+        
+        .header__burger.active{
+            transform: rotate(90deg);
+           
+        }
+        .header__burger span{
+            content: '';
+            background-color: $accent-color;
+            height: 2px;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 10px;
+        }
+        .header__burger::before,
+        .header__burger::after{
+            content: '';
+            background-color: $accent-color;
+            height: 2px;
+            width: 100%;
+            position: absolute;
+            left: 0;
+        }
+        .header__burger::before{
+            top: 0;
+        }
+        .header__burger::after{
+            bottom: 0;
+        }
+    }
+   
+    @media (max-width: 767px){
+    
+    .header__burger__pets{
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 22px;
+        margin-right: 43px;
+    }
+    .header__burger_pets span{
+        background-color: black;
+        
+    }
+    .header__burger_pets::before,
+    .header__burger_pets::after{
+        background-color: black;
+    }
+    .header__burger_pets::before{
+        top: 0;
+    }
+    .header__burger_pets::after{
+        bottom: 0;
+    }
+
+    .footer__text > *:not(:last-child) {
+        margin-right: 30px;
+    }
+    .section__title{
+        font-size: 30px;
+    }
+    }
+
+
+/* -------------MOBILE---------------- */
+
+    @media (max-width: 321px){
+    .section__title{
+        font-size: 25px;
+        text-align: center;
+        justify-content: center;
+    }
+    .content_section{
+        padding: 42px 0;
+    }
+    ._container{
+        max-width: 300px;
+    }
+    .header__container{
+        justify-content: space-between;
+        padding: 0 10px;
+        margin: 0 10px;
+    }
+    
+    .main__title{
+        font-size: 25px;
+        text-align: center;
+        justify-content: center;
+        max-width: 300px;
+        letter-spacing: 0.1rem;
+    }
+    .main__content {
+        flex-direction: column;
+        align-items: center;    
+        padding-top: 30px;    
+    }
+    .main__btn{
+        margin: 0 auto;
+    }
+    .main__text{        
+        margin: 0 auto 99px;
+        padding-top: 0;
+    }
+    .main__img{
+        width: 260px;
+        height: 272px;
+        margin-left: calc(50% - 260px/2 + 13px);;
+    }
+    .main__content >*:not(:last-child){
+        margin-right: auto; 
+        margin-bottom: 100px;       
+    }   
+    .main__description{
+        text-align: center;
+    }
+    /* -------------------- ABOUT----------------------*/
+    .about__content{
+        flex-direction: column-reverse;    
+    }
+    .about__title{
+        text-align: center;
+    }
+    .about__text{
+        margin-bottom: 42px;
+    }
+    .about__description{
+        text-align:justify;
+        max-width: 270px;
+    }
+    .about__content >*:not(:last-child){
+        margin-right: auto;
+    }
+    .about__img{
+        width: 260px;
+        height: 354px;
+        margin: 0 auto;
+    }
+
+    /* ------------FRIENDs----------------- */
+    .friends{
+        padding-bottom: 42px;
+    }
+    .carousel__wrapper{
+        max-width: 270px;
+    }
+   .friends__title{
+    margin-bottom: 42px;
+   }
+   .friends__list{
+    margin: 0 auto;
+   }
+   .friends__item{
+    order: 1;
+   }
+   .friends__content >*:not(:last-child) {
+    margin-bottom: 42px;
+}
+.slider{
+    position: relative;
+}
+.carousel{
+    position: relative;
+    left: -640px;
+    display: flex;
+    cursor: pointer;    
+    flex: 1;
+    margin: 0 20px;
+}
+@keyframes move-right{
+    from{left: -640px;}
+    to{left: -370px;}    
+}
+.transition-right{
+        animation-name: move-right;
+        animation-duration: 3s;    
+    }
+@keyframes move-left{
+        from{left: -370px;}
+        to{left: -640px;}    
+    }
+.transition-left{
+            animation-name: move-left;
+            animation-duration: 5s;    
+        }
+.paginator__btn{
+    position: absolute;
+    bottom: -35px;
+}
+.arrow-left{
+    left: 35px;
+}
+.arrow-right{
+    right: 35px;
+}
+.friends__more{
+    margin-top: 33px;
+}
+    /* --------------HELP--------------- */
+    .help {
+        margin-bottom: 0;
+    }
+    .help__title{
+        margin-bottom: 42px;
+    }
+    .help__container{
+        width: 290px;
+    }
+    .help__list{
+        max-width: 630px;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+    .help__item {
+        flex: 0 0 35%;
+    }
+    .help__list>*:not(:nth-child(n+7)):nth-child(-n+9){
+        margin-bottom: 29px;
+    }
+    .help__list>:nth-child(n+7):nth-child(-n+9):not(:last-child){
+        margin-bottom: 29px;
+    }
+    .help__name{
+        font-size: 15px;
+        width: 100%;
+    }
+    .help__item >*:not(:last-child){
+        margin-bottom: 20px;
+    }
+    .help__icon{
+        width: 50px;
+        height: 50px;
+        background-size: cover;
+    }
+    /* --------------DONATION---------------- */
+    .donation__card{
+        align-items: center;
+    }
+    .card__description{
+        text-align: center;
+        line-height: 160%;
+        letter-spacing: 0rem;
+    }
+    .card__number{
+        font-size: 15px;     
+    }
+    .card__info{
+        margin: 0 auto;
+    } 
+    .donation__text{
+        margin: 0 auto;
+        margin-bottom: 42px;
+        align-items: center;
+    }
+    .donation__subtitle{
+        max-width: 280px;
+        text-align: justify;
+    }
+    .donation__container >*:not(:last-child) {
+        margin-right: auto;
+    }
+    .donation__img{
+        width: 260px;
+        height: 135px;
+        margin: 0 auto;
+    }
+    /* ---------FOOOTER--------------*/
+    .footer {
+        padding-top: 30px;
+    }
+    .footer__container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer__section{
+        align-items: center;
+    }
+    .contacts__title,
+    .address__title {
+        font-size: 25px;
+        max-width: 270px;
+    }
+    .footer__address > *:not(:last-child) {
+        margin-bottom: 0;
+    }
+    .footer__address > *:not(:last-child) {
+        margin-bottom: 37px;
+    }
+    .footer__address .address__title{
+        margin-bottom: 40px;
+    }
+    
+    .footer__text>*:not(:last-child){
+        margin-right: 0;
+        margin-bottom: 40px;
+    }
+    .footer__text{        
+        flex-direction: column;
+    }
+    .footer__text{
+        margin-bottom: 40px;
+    }
+    .footer__img{
+        width: 260px;
+        height: 269px;
+        background-size: cover;
+    }
+    /* ------------------           OUR PETS                ----------------- */
+    
+    .pets__title{
+        font-size: 25px;
+    }
+    
+    .pets{
+        padding-bottom: 42px;
+        padding-top: 42px;
+    }
+    .pets__list >*:not(:nth-child(4)):not(:nth-child(8)) {
+        margin-right: unset;
+    }
+    .pets__item{
+        flex: 0 0 25%;
+    }    
+    .carousel__wrapper{
+        width: 300px;        
+        overflow-y: hidden;
+        margin-bottom: 42px;
+    }
+    .pets__list{
+        width: 100%;
+    }
+    .pets__title{
+        margin-bottom: 42px;
+    }
+    
+    .pets__paginator >*:not(:last-child){
+        margin-right: 10px;
+    }
+    .paginator__btn_pets{
+        position: unset;
+    }
+    }

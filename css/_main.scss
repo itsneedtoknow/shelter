@@ -1,0 +1,65 @@
+.main__content {
+    display: flex;
+    padding-top: 60px;
+    
+}
+.main__content >*:not(:last-child){
+    margin-right: 42px;
+    
+}
+.main__text {
+    display: flex;
+    flex-direction: column;
+    max-width: 460px;
+    padding-top: 163px;
+    align-items: flex-start;
+}
+.main__text >*:not(:last-child){
+   margin-bottom: 42px;
+}
+.main__title{
+    font-family: $title-font;
+    max-width: 310px;
+    width: 100%;
+    font-size: 44px;
+    line-height: 130%;
+    display: flex;
+    align-items: center;
+    color: $neutral-color;
+}
+.main__description {
+    font-family: $text-font;
+    font-size: 15px;
+    line-height: 160%;
+    color: #CDCDCD;
+    
+}
+.main__img{
+    background-image: url(../img/main/start-screen-puppy.jpg);
+    background-size: cover;
+    width: 698px;
+    height: 728px;
+   
+}
+a.main__btn{
+    padding: 15px 45px;
+    border-radius: 100px;
+    text-align: center;
+    background-color: $accent-color;
+
+}
+.main__link{
+    font-family: $title-font;
+    font-size: 17px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #292929;
+
+}
+
+.main__btn:hover{
+    cursor: pointer;
+    transition: 0.2s;    
+    background-color: $neutral-color;
+    border: 1px solid $accent-color;
+}

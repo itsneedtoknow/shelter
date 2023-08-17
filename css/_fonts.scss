@@ -1,0 +1,24 @@
+@font-face{
+    font-family: 'Georgia';    
+    src: url('../fonts/Georgia.woff') format('woff');    
+    src: url('../fonts/Georgia.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Arial Narrow';
+    src: url('../fonts/ArialNarrow.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Arial';
+    src: url('../fonts/ArialMT.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
