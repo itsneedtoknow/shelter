@@ -1,0 +1,35 @@
+.about {
+    display: flex;
+
+    
+}
+
+.about__content {
+    display: flex;
+    align-items: center;
+
+    &>*:not(:last-child){
+        margin-right: 120px;
+    }
+
+    
+}
+.about__img {
+    background: url(../img/about/about-pets.png);
+    background-size: cover;
+    width: 300px;
+    height: 408px;
+}
+.about__text {
+    max-width: 430px;
+}
+.about__title {
+    text-align: start;
+   margin-bottom: 25px;
+}
+.about__description {
+    font-family: $text-font;
+    font-size: 15px;
+    line-height: 160%;
+    color: #4C4C4C;
+}
